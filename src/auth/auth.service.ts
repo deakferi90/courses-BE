@@ -6,7 +6,8 @@ export class AuthService {
   constructor(private userService: UsersService) {}
 
   registerUser(user) {
-    return this.userService.registerUser(user);
+    const {password, ...rest} = this.userService.registerUser(user);
+    return {user: rest, token: 'this will contain also the token'};
   }
 
    //TO DO: refactor this beecause it is ugly like hell

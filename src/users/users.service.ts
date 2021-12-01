@@ -18,7 +18,7 @@ export class UsersService {
 
   registerUser(user) {
     this.users.push(user);
-    return { succes: true };
+    return user;
   }
 
   getAllUsers(): User[] {
