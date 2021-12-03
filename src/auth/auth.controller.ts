@@ -26,4 +26,14 @@ export class AuthController {
   getTestCats() {
     return {cats:'this are the cats that we work with'};
   }
+  
+  @Get('testdogs')
+  getTestDogs() {
+    return {dogs:'these are the dogs'};
+  }
+
+  @Get('mice')
+  getTestMice() {
+    return {mice:'these are the mice'};
+  }
 }
