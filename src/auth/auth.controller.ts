@@ -37,12 +37,12 @@ export class AuthController {
   @Get('testcats')
   @UseGuards(JwtAuthGuard, JwtPresentGuard)
   getTestCats() {
-    return {cats:'this are the cats that we work with'};
+    return {cats: ['cat 1', 'cat 2', 'cat 3', 'cat 4']};
   }
   
   @Get('testdogs')
   getTestDogs() {
-    return {dogs:'these are the dogs'};
+    return {dogs:['dog1', 'dog2', 'dog3', 'dog 4']};
   }
 
   @Get('mice')
