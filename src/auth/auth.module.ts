@@ -22,5 +22,14 @@ import { JwtPresentGuard } from './jwt-present.guard';
     JwtPresentGuard,
   ],
   controllers: [AuthController],
+  exports: [
+    AuthService,
+    RegisterGuard,
+    LocalAuthStrategy,
+    LocalAuthGuard,
+    JwtStrategy,
+    JwtAuthGuard,
+    JwtPresentGuard,
+  ],
 })
 export class AuthModule {}
