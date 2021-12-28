@@ -11,8 +11,8 @@ export class AuthController {
 
   @Post('register')
   @UseGuards(RegisterGuard)
-  register(@Body() body) {
-    return this.authService.registerUser(body);
+  register(@Body() user) {
+    return this.authService.validateUserForRegistration(user);
   }
 
   @Post('login')

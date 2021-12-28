@@ -53,6 +53,7 @@ export class AuthService {
     if (!user.username) return false;
     if (!user.password) return false;
     const found = this.userService.findOne(user.email);
+    this.registerUser(user);
     if (found) return false;
     user.roles = ['user'];
     user.tokens = [];
